@@ -1,0 +1,19 @@
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/598/480/original/abstract-colorful-low-poly-vector-background-with-warm-gradient-futuristic-pattern.jpg');
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 75%;
+    width: 50%;
+    border-radius: 2em;
+
+  } 
