@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>ADD COMPANY</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <!--<link href="assets/vendor/aos/aos.css" rel="stylesheet">-->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">\
+
+</head>
+
+<body>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+
+
+   // import {getDatabase, ref, set} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js">
+    </script>
+    <script src="mail.js"></script>
+
+
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <header id="header">
+        <div class="d-flex flex-column" style="float: left; ">
+
+            <div class="profile">
+
+                <h1 class="text-light">ADMIN</h1>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+
+                    <li><a href="Admin_Home.html" class="nav-link scrollto"><i class="bx bx-user"></i>
+                            <span>HOME</span></a></li>
+                    <li><a href="Admin_Students.html" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+                            <span>STUDENTS </span></a></li>
+                    <li><a href="Admin_Company.html" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+                            <span><b>COMPANY</b></span></a></li>
+                    <li><a href="Login_Admin.html" class="nav-link scrollto"><i class="bx bx-user"></i>
+                            <span>LOGOUT</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+
+
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>ADD COMPANY</h2>
+                    <div>
+
+
+                        <div class="container py-5 h-50">
+                            <div class="row d-flex justify-content-center align-items-center h-50">
+                                <div class="col-12">
+                                    <div class="card card-registration card-registration-2"
+                                        style="border-radius: 15px;">
+                                        <div class="card-body p-0">
+                                            <div class="aab justify-content-center align-content-center">
+                                                <div class="lg-6">
+                                                    <div class="p-5 w-auto">
+                                                        <h3 class="fw-normal mb-5" style="color: #010009;">Company
+                                                            Details</h3>
+
+
+                                                        <div class="col-lg-12 mb-4 pb-2">
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3"
+                                                                    for="form3Examplev2">Company Name:
+                                                                </label><input type="text" id="cname"
+                                                                  class="form-control form-control-lg " />
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-4 pb-2">
+
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3"
+                                                                    for="form3Examplev2">Designation:
+                                                                </label><input type="text" id="cdesi"
+                                                                    class="form-control form-control-lg " />
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <div class="col-lg-12 mb-4 pb-2">
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3"
+                                                                    for="form3Examplev2">Vacancy:
+                                                                </label><input type="text" id="cvacancy"
+                                                                    class="form-control form-control-lg " />
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-4 pb-2">
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3"
+                                                                    for="form3Examplev2">Package:
+                                                                </label><input type="text" id="cpackage"
+                                                                    class="form-control form-control-lg " />
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-4 pb-2">
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3 "
+                                                                    for="form3Examplev2">
+                                                                    Last Date:
+
+                                                                </label>   <div class="col-md-6 mb-4 pb-2">
+                                    
+                                                                    <input type="date" id="cdate" >
+                                                              
+                                                                  </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-4 pb-2">
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3"
+                                                                    for="form3Examplev2">Contact No:
+                                                                </label><input type="text" id="ccontact"
+                                                                    class="form-control form-control-lg " />
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                <label class="form-label w-auto col-5 m-3"
+                                                                    for="form3Examplev2">Email:
+                                                                </label><input type="text" id="cmail"
+                                                                    class="form-control form-control-lg " />
+
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="p-5">
+                                                        <h3 class="fw-normal mb-5">Selection Criteria</h3>
+
+
+                                                        <div class="col-lg-4 mb-4 pb-2">
+
+                                                            <div>
+                                                                <label class="form-label"
+                                                                    for="formExamplea6"><u>Branch</u></label>
+                                                            </div>
+                                                            <div class="">
+
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="T6A" id="eca">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        ECA
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="T6B" id="ecb">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        ECB
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="R6" id="cs">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        CS
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="M6" id="me">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        ME
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="P6" id="pro">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        MP
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="U6" id="auto">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        MA
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="B6" id="bt">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault">
+                                                                        BT
+                                                                    </label>
+                                                                </div>
+
+
+
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 mb-4 pb-2">
+
+                                                                <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                    <label class="form-label w-auto col-5 m-3"
+                                                                        for="form3Examplev2">10th %:
+                                                                    </label><input type="text" id="c10"
+                                                                        class="form-control form-control-lg " />
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 mb-4 pb-2">
+
+                                                                <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                    <label class="form-label w-auto col-5 m-3"
+                                                                        for="form3Examplev2">12th %:
+                                                                    </label><input type="text" id="c12"
+                                                                        class="form-control form-control-lg " />
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-4 mb-4 pb-2">
+
+                                                                <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                    <label class="form-label w-auto col-5 m-3"
+                                                                        for="form3Examplev2">Diploma %:
+                                                                    </label><input type="text" id="cdiploma"
+                                                                        class="form-control form-control-lg " />
+
+                                                                </div>
+
+                                                            </div>
+
+
+                                                        </div>
+
+
+
+
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-3 mb-4 pb-2">
+
+                                                                <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                    <label class="form-label w-auto col-5 m-3"
+                                                                        for="form3Examplev2">CGPA:
+                                                                    </label><input type="text" id="ccgpa"
+                                                                        class="form-control form-control-lg " />
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-3 mb-4 pb-2">
+
+                                                                <div class="form-outline col-lg-12 mb-4 d-inline-flex ">
+
+                                                                    <label class="form-label w-auto col-5 m-3"
+                                                                        for="form3Examplev2">No: of Supplies:
+                                                                    </label><input type="text" id="csupply"
+                                                                        class="form-control form-control-lg " />
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <button type="button" class="btn btn-primary btn-lg mt-3"
+                                                            data-mdb-ripple-color="dark" onclick="addcompany()">Save</button>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+        </section>
+
+
+
+</body>
+
+</html>

@@ -1,19 +1,98 @@
-
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-body{
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/598/480/original/abstract-colorful-low-poly-vector-background-with-warm-gradient-futuristic-pattern.jpg');
+body {
+    background-image: url('https://img.freepik.com/free-vector/seamless-gold-rhombus-grid-pattern-black-background_53876-97589.jpg?t=st=1657132738~exp=1657133338~hmac=992fec335ab0c5bd65c077e67da6f9eecd0a78980ed87218c67039f5becce6cc&w=1060');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
-    align-items: center;
     display: flex;
     justify-content: center;
     height: 75%;
-    width: 50%;
+    width: 30%;
+    border-radius: 2em;
+    margin-top: 2cm;
+
+}
+
+.content {
+    margin-top: 1cm;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: blue;
+    color: #e6ebef;
+    margin-left: 99%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
     border-radius: 2em;
 
-  } 
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #4764e5;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 2px;
+    width: 100%;
+    height:min-content;
+    padding-bottom: 0px;
+
+}
+
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: 94%;
+    background-color: cornflowerblue;
+    min-width: auto;
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 1em;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: auto;
+
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(111, 196, 225);
+    border-radius: 1em;
+
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+
+}

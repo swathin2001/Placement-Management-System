@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>faculty</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!--<link href="assets/vendor/aos/aos.css" rel="stylesheet">-->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body onload="getdata()">
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+
+
+   // import {getDatabase, ref, set} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js">
+  </script>
+  <script src="./fac_tab.js"></script>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+
+        <h1 class="text-light pt-4">FACULTY </h1>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="Faculty_studlist.html" class="nav-link scrollto"><i class="bx bx-home"></i>
+              <span style="color: #418bbc"><b>HOME</b></span></a></li>
+          <li><a href="Faculty_Password_Change.html" class="nav-link scrollto"><i class="bx bx-user"></i>
+              <span>PASSWORD CHANGE</span></a></li>
+          <li><a href="faculty_validation.html" class="nav-link scrollto" onclick="alertb()"><i
+                class="bi-check-square"></i>
+              <span>VALIDATION</span></a></li>
+          <li><a href="Login_Faculty.html" class="nav-link scrollto"><i class="bi-box-arrow-in-left"></i>
+              <span>LOGOUT</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main id="main">
+
+
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Registration Status</h2>
+          <div>
+
+            <div>
+              <table class="table w-100" id="table">
+                <thead>
+                  <th>Serial No.</th>
+                  <th>Register No.</th>
+                  <th>Name</th>
+                </thead>
+                <tbody id="tbody1"></tbody>
+              </table>
+
+            </div>
+            <button type="button" class="btn btn-primary btn-sm mt-3 mt-5 " data-mdb-ripple-color="dark"
+              onclick="ExportToExcelregistrationstatus('xlsx')">Export table to excel</button>
+            <script>
+              function ExportToExcelregistrationstatus(type, fn, dl) {
+                var elt = document.getElementById('table');
+                var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+                return dl ?
+                  XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                  XLSX.writeFile(wb, fn || ('Registration Status.' + (type || 'xlsx')));
+              }
+            </script>
+    </section>
+
+
+
+
+
+
+
+
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>REGISTRATION</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!--<link href="assets/vendor/aos/aos.css" rel="stylesheet">-->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body onload="loaddata()">
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+    // document.getElementById('reg_no').value = sessionStorage.getItem("reg");
+    // document.getElementById('reg_no').disabled = true;
+    // document.getElementById('branch').value = sessionStorage.getItem("br");
+    // document.getElementById('branch').disabled = true;
+
+   // import {getDatabase, ref, set} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js">
+  </script>
+  <script src="Student_edit_profile.js"></script>
+
+
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+
+        <h1 class="text-light pt-4">STUDENT</h1>
+    </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+
+          <li><a href="./index.html" class="nav-link"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="Student_Applied_company.html"><i class="bi-check-circle"></i> <span>Applied Compnies</span></a></li>
+          <li><a href="Student_Edit_profile.html" class="nav-link active"><i class="bi-person-badge"></i> <span>Edit Profile</span></a></li>
+          <li><a href="Student_Password_Change copy.html" class="nav-link"><i class="bi-pen"></i> <span>Change Password</span></a></li>
+          <li><a href="Login_Student.html" class="nav-link"><i class="bi-box-arrow-in-left"></i> <span>Logout</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main id="main">
+
+
+
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>STUDENT DETAILS</h2>
+          <div>
+
+
+            <div class="container py-5 h-50">
+              <div class="row d-flex justify-content-center align-items-center h-50">
+                <div class="col-12">
+                  <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                      <div class="row g-0">
+                        <div class="col-lg-6 ">
+                          <div class="p-5">
+                            <h3 class="fw-normal mb-5" style="color: #010009;">Personal Details</h3>
+
+
+
+                            <div class="row">
+                              <div class=" mb-4 pb-2">
+
+
+                                <div class="form-outline col-lg-12 mb-4">
+                                  <input type="text" id="na_text" class="form-control form-control-lg" onkeypress="return (event.charCode > 64 && 
+                                  event.charCode < 91 )|| event.charCode==32 || (event.charCode > 96 && event.charCode < 123)" required />
+                                  <label class="form-label" for="form3Examplev2">Full Name</label>
+                                </div>
+
+                                <div class="form-outline col-lg-12 pb-4">
+
+                                  <textarea rows="3" class="form-control" id="add_area"
+                                    class="form-control form-control-lg"></textarea required>
+                                  <label class="form-label" for="form3Examplev3">Address</label>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                            <div class="row">
+                              <div class=" col-md-6 mb-4 pb-2 w-100 ">
+                                <div class="md-4 w-100">
+                                  <label class="form-label me-5" for="form3Examplev3">Gender:</label> 
+                                  <input class="form-check-input ms-4 " type="radio" value="male" name="gender"><label
+                                    id="male"> Male</label>
+                                  <input class="form-check-input ms-3" type="radio" value="female" name="gender"><label
+                                    id="female"> Female</label>
+                                  <input class="form-check-input ms-3" type="radio" value="others" name="gender"><label
+                                    id="others"> Others</label>
+                                   
+                                </div>
+
+                              </div>
+                              
+                            </div>
+                            <div class="col-md-8 mb-4 pb-2 w-100">
+
+                              <label class="form-label me-4" for="form3Examplev3">Date of Birth:</label> 
+                              <input class="form-label col-lg-5 ms-4 mb-4" type="date" id="datefield">
+
+                            </div>
+                            <div class="col-lg-12 mb-4 pb-2">
+                              <div class="form-outline">
+                                <input type="text" id="ph_no" class="form-control form-control-lg" maxlength="10"
+                                  onkeypress="return (event.charCode> 47 &&
+                                event.charCode < 58) " required>
+                                <label class="form-label" for="form3Examplev4">Phone Number</label>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-lg-12 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="email" id="email" class="form-control form-control-lg"
+                                    onchange="ValidateEmail(this)" required/>
+                                  <label class="form-label" for="form3Examplev5">Email</label>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 mb-4 pb-2">
+
+                              </div>
+
+                            </div>
+                            
+
+                          </div>
+                        </div>
+                        <div class="col-lg-6 bg-indigo text-align">
+                          <div class="p-5">
+                            <h3 class="fw-normal mb-5">Academic Details</h3>
+
+                            <div class="mb-4 pb-2">
+                              <div class="form-outline form-white">
+                                <input type="text" id="reg_no" class="form-control form-control-lg" maxlength="11" required  />
+                                <label class="form-label" for="form3Examplea2">Register Number</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-6 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  
+                                  
+                                  <select class="form-control form-control-lg" id="branch">
+                                    
+                                    <option>Select Option &#8681;</option>
+                                    <option value="R6">R6</option>
+                                    <option>M6</option>
+                                    <option>T6B</option>
+                                    <option>T6A</option>
+                                    <option>P6</option>
+                                    <option>B6</option>
+                                    <option>U6</option>
+                                </select>
+                                <label class="form-label" for="form3Examplea3">Branch</label>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="batch" class="form-control form-control-lg"  />
+                                  <label class="form-label" for="form3Examplea4">Batch</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row pb-0">
+                              <div class="col-lg-4 mb-4 pb-0">
+
+                                <div class="form-outline form-white">
+                                  <input type="text" id="tenth" class="form-control form-control-lg" onchange="handleChange(this)"  required />
+                                  <label class="form-label" for="form3Examplea4">10th %</label>
+                                </div>
+
+                              </div>
+                              <div class="col-lg-4 mb-4 pb-0">
+
+                                <div class="form-outline form-white">
+                                  <input type="text" id="12th" class="form-control form-control-lg" onchange="handleChange(this)"
+                                    />
+                                  <label class="form-label" style="font: #000;" for="form3Examplea5">12th %</label>
+                                </div>
+
+                              </div>
+                              <div class="col-lg-4 mb-4 pb-0">
+
+                                <div class="form-outline form-white">
+                                  <input type="text" id="diploma" class="form-control form-control-lg" onchange="handleChange(this)"  />
+                                  <label class="form-label" for="form3Examplea5">Diploma % </label>
+                                </div>
+                                <script>
+                                  function handleChange(input) {
+                                    if (input.value < 0) input.value = 0;
+                                    if (input.value > 100) input.value = 100;
+                                  }
+                                </script>
+
+                              </div>
+
+
+                            </div>
+
+                            <div>
+                              <label class="form-label" for="formExamplea6"><u>SGPA</u></label>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s1" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" min="0.0" max="10.0"/>
+                                  <label class="form-label" for="form3Examplea6">S1</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s2" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S2</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s3" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S3</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s4" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S4</label>
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s5" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S5</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s6" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S6</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s7" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S7</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="s8" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" />
+                                  <label class="form-label" for="form3Examplea6">S8</label>
+                                </div>
+                              </div>
+
+                            </div>
+
+
+
+
+                            <div class="row">
+                              <div class="col-md-3 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                  <input type="text" id="cgpa" class="form-control form-control-lg " onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58) || event.charCode == 46 " maxlength="4" required />
+                                  <label class="form-label" for="form3Examplea7">CGPA</label>
+                                </div>
+
+                              </div>
+                              <div class="col-md-3 mb-4 pb-2">
+
+                                <div class="form-outline form-white">
+                                  <input type="text" id="supply" class="form-control form-control-lg" onkeypress="return (event.charCode> 47 &&
+                                  event.charCode < 58)" maxlength="2" required />
+                                  <label class="form-label" for="form3Examplea8">No. of Supply</label>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+
+
+
+                            <button type="button" class="btn btn-primary btn-lg mt-3" data-mdb-ripple-color="dark"
+                              onclick="writeUserData()">Register</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+    </section>
+    <script type="text/javascript" defer>
+
+      function ValidateEmail(inputText) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (inputText.value.match(mailformat)) {
+          alert("Valid email address!");
+          document.form1.text1.focus();
+          return true;
+        }
+        else {
+          alert("You have entered an invalid email address!");
+          document.form1.text1.focus();
+          return false;
+        }
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+  </main>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
